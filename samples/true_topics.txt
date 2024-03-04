@@ -1,0 +1,36 @@
+Topic cluster 0: politics	
+    - federal_budget
+    - surveillance
+    - the_affordable_care_act
+    - immigration
+    - law_enforcement
+    - gay_rights
+    - gun_control
+    - military
+    - abortion
+
+Topic cluster 1: arts	
+    - dance
+    - television
+    - music
+    - movies
+
+Topic cluster 2: business
+    - stocks_and_bonds
+    - energy_companies
+    - economy
+    - international_business
+
+Topic cluster 3: science
+    - cosmos
+    - environment
+
+Topic cluster 4: sports
+    - hockey
+    - basketball
+    - tennis
+    - golf
+    - football
+    - baseball
+    - soccer
+
