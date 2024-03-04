@@ -68,7 +68,7 @@ With no other contextual information beyond the input corpus, TopicGemini semant
 #### References
 References for images:
 
-Corpus Iimages
+Corpus images
 https://botpenguin.com/glossary/corpus
 
 Embedding image
