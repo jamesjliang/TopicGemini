@@ -128,8 +128,10 @@ def main(input_corpus):
 
     # Step 2: Train embedding model on input corpus
     print("2. Train word2vec embedding model")
-    if SAVE_EMBEDDING_MODEL:
-        word2vec_model = create_word2vec_model(corpus, SAVE_EMBEDDING_MODEL)
+    if not EMBEDDING_MODEL_CREATED:
+        EMBEDDING_MODEL_CREATED = True
+        print("    Creating the word2vec embedding model...")
+        word2vec_model = create_word2vec_model(corpus, EMBEDDING_MODEL_CREATED)
     word2vec_model = Word2Vec.load('models/word2vec_model.bin')
     print("    Done.\n")
 
@@ -150,8 +152,7 @@ def demonstrate_RAG():
     ...to output both the (1) summarisation of the topic with context, and (2) the index of documents retrieved.
     '''
     # Step 6: Output an example of RAG extraction of a topic.
-    vectorstore_created = True                                 # Use the Vector Store that is already saved to the directory. 
-    vectorstore = setup_vectorstore()                          # Refer to RAG_summarise.py to see how to setup a new one.
+    vectorstore = setup_vectorstore(VECTOR_STORE_CREATED)        # Vector Store will be saved to local disc following first run
 
     #### Example of RAG.
     prompt = "Summarise the news extracts about the sports topic, champions league finals"
@@ -167,7 +168,8 @@ if __name__ == "__main__":
     STOPWORDS = set(nltk.corpus.stopwords.words('english'))
     MAX_DEPTH = 2
     TOPIC_STRUCTURE = {}
-    SAVE_EMBEDDING_MODEL = False                # Change to True if you wish to create and save the word2vec model again.
+    EMBEDDING_MODEL_CREATED = False            # Create a new Word2Vec Model that is saved to local disc (~1 min). Set to True after first run. 
+    VECTOR_STORE_CREATED = False               # Create a new Vector Store that will be saved to local disc (~4 mins). Set to True after first run.
 
     # Topic Modelling on input corpus
     input_corpus = "data/nyt.txt"
