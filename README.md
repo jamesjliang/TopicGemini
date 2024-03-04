@@ -4,7 +4,9 @@ Leveraging LLMs to improve existing Topic Modelling methods
 ## Project Background:
 Topic Modelling is a common, yet deeply fascinating component of Natural Language Processing.
 Usually, traditional approaches to this problem involve either:
+
     (1) Latent Dirichlet Allocation (LDA) 
+    
     (2) Clustering and extracting centroid terms.
 
 However, both these methods suffer from unsatisfactory topic granularity in the extracted terms,
@@ -16,4 +18,10 @@ improve existing processes in Topic Modelling, making them more effective for to
 
 ## Inputs and Outputs
 Input : Text Corpus                         
-Output: Topic Hierarchy of Corpus - with RAG supplemented summarisations for finer granularity topic information.
+Output: Topic Hierarchy of Corpus - with RAG supplemented summarisations for finer granularity topics.
+
+#### Quickstart
+To generate the topic hierarchy and RAG supplemented summarisations, run main.py. Please note that this requires an active Google Gemini API key. To view the sample outputs, refer to the sample directory.
+
+## Methodology
+<img width="1084" alt="image" src="https://github.com/jamesliang728/TopicGemini/assets/161998923/c4f36bc3-a863-4cc9-a5de-76872785d1ac">
