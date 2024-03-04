@@ -152,7 +152,7 @@ def demonstrate_RAG():
     ...to output both the (1) summarisation of the topic with context, and (2) the index of documents retrieved.
     '''
     # Step 6: Output an example of RAG extraction of a topic.
-    vectorstore = setup_vectorstore(VECTOR_STORE_CREATED)        # Vector Store will be saved to local disc following first run
+    vectorstore = setup_vectorstore(VECTOR_STORE_CREATED)        # If VECTOR_STORE_CREATED is False: Vector Store will be created and saved to local disc following first run.
 
     #### Example of RAG.
     prompt = "Summarise the news extracts about the sports topic, champions league finals"
@@ -175,5 +175,5 @@ if __name__ == "__main__":
     input_corpus = "data/nyt.txt"
     main(input_corpus)
 
-    # RAG Demonstration on topic.
-    demonstrate_RAG()
+    # RAG Demonstration on topic. [Unhash demonstrate_RAG() to create a vector store and run a demonstration prompt with RAG)
+    # demonstrate_RAG()
