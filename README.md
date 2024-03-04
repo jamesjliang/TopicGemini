@@ -1,7 +1,7 @@
 # TopicGemini
 Leveraging LLMs to improve existing Topic Modelling methods
 
-### Project Background:
+## Project Background:
 Topic Modelling is a common, yet deeply fascinating component of Natural Language Processing.
 Usually, traditional approaches to this problem involve either:
     (1) Latent Dirichlet Allocation (LDA) 
@@ -14,8 +14,7 @@ With the introduction of Large Language Models such as GPT-4 or Gemini, which ar
 into natural language processing, TopicGemi explores the potential of how LLMs can be leveraged to 
 improve existing processes in Topic Modelling, making them more effective for topic extraction.
 
-### Inputs and Outputs
-Input : Text Corpus                         "nyt.txt"
-
-Output: Topic Hierarchy of Corpus.          "outputs/output_topics.txt"
+## Inputs and Outputs
+Input : Text Corpus                         
+Output: Topic Hierarchy of Corpus.         
         - with RAG supplemented summarisations for finer granularity topic information.
