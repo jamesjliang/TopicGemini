@@ -1,5 +1,5 @@
 '''
-Project Name: TopicGemi
+Project Name: TopicGemini
 
 Module Name: main.py
 Author: James Liang
