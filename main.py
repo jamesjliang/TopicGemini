@@ -25,7 +25,7 @@ improve existing processes in Topic Modelling, making them more effective for to
 '''
 import nltk
 from gensim.models import Word2Vec
-from utils import load_docs, output_topics_to_txt
+from utils import load_docs, output_topics_to_txt, initialise_llm_model
 from clustering import (create_word2vec_model, process_words, run_clustering)
 from LLM_topic_refine import refine_topic_clusters
 
@@ -129,9 +129,8 @@ def main(input_corpus):
     # Step 2: Train embedding model on input corpus
     print("2. Train word2vec embedding model")
     if not EMBEDDING_MODEL_CREATED:
-        EMBEDDING_MODEL_CREATED = True
         print("    Creating the word2vec embedding model...")
-        word2vec_model = create_word2vec_model(corpus, EMBEDDING_MODEL_CREATED)
+        word2vec_model = create_word2vec_model(corpus, save_model=True)
     word2vec_model = Word2Vec.load('models/word2vec_model.bin')
     print("    Done.\n")
 
@@ -163,6 +162,9 @@ def demonstrate_RAG():
     print(f"    Summary: {ai_output['answer']}\n")
     print(f"    Documents used: {ai_output['documents']}")
 
+def test_valid_api_key():
+    '''Test initialising an LLM model with the API key'''
+    llm = initialise_llm_model()
 
 if __name__ == "__main__":
     STOPWORDS = set(nltk.corpus.stopwords.words('english'))
@@ -170,6 +172,7 @@ if __name__ == "__main__":
     TOPIC_STRUCTURE = {}
     EMBEDDING_MODEL_CREATED = False            # Create a new Word2Vec Model that is saved to local disc (~1 min). Set to True after first run. 
     VECTOR_STORE_CREATED = False               # Create a new Vector Store that will be saved to local disc (~4 mins). Set to True after first run.
+    test_valid_api_key()
 
     # Topic Modelling on input corpus
     input_corpus = "data/nyt.txt"
