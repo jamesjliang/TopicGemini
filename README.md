@@ -16,5 +16,4 @@ improve existing processes in Topic Modelling, making them more effective for to
 
 ## Inputs and Outputs
 Input : Text Corpus                         
-Output: Topic Hierarchy of Corpus.         
-        - with RAG supplemented summarisations for finer granularity topic information.
+Output: Topic Hierarchy of Corpus - with RAG supplemented summarisations for finer granularity topic information.
