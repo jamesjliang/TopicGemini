@@ -1,0 +1,73 @@
+Topic cluster 0: actions
+    - actions involving questioning
+    - kicking
+    - traded
+    - actions that were expected
+
+Topic cluster 1: economy
+    - federal budget
+    - carbon emissions regulations
+    - impact of rising energy prices on manufacturing sector
+    - taxation and revenue
+
+Topic cluster 2: life
+    - physical health
+    - managing expectations
+    - feeling good
+    - the role of sports in shaping character
+
+Topic cluster 3: government
+    - deputy attorney general
+    - mr/ms. representative's role in local government
+    - f.b.i. testimony before congressional committee
+    - executive director's role in government
+
+Topic cluster 4: energy
+    - nuclear power
+    - the evolution of musical instruments
+    - energy efficiency
+    - solar energy
+
+Topic cluster 5: arts and entertainment
+    - saxophonist
+    - hollywood glamour
+    - subgenres of heavy metal
+    - electronic music
+
+Topic cluster 6: sports
+    - pedro martinez's pitching performance in the 1999 world series
+    - pinch running
+    - champions league finals
+    - earned run average (e.r.a.)
+
+
+
+
+**Note: By running Retrieval Augmented Generation for LLMs, users can get a deeper insight into the topic being discussed. This is done by writing a prompt about a specific topic, allowing the LLM to retrieve relevant NYT documents and collate a summary.
+
+## Example: 
+Topic cluster 6: sports
+    - champions league finals
+
+Let's say a user was interested in champions league finals in sports. A prompt could be engineered in the following way:
+	prompt = "Summarise the news extracts about the sports topic, champions league finals"
+
+## Output:
+    - champions league finals
+
+   Summary: Bayern Munich won the 2013 UEFA Champions League Final against Borussia Dortmund 2-1. The match was played at Wembley Stadium in London, England. Bayern Munich's goals were scored by Mario Mandzukic and Arjen Robben, while Dortmund's goal was scored by İlkay Gündoğan. Bayern Munich's victory gave them their fifth European Cup title, and their first since 2001.
+
+   Documents used to create the information: [{'row': 1643, 'source': 'nyt.csv'}, {'row': 11497, 'source': 'nyt.csv'}, {'row': 399, 'source': 'nyt.csv'}, {'row': 1890, 'source': 'nyt.csv'}, {'row': 1697, 'source': 'nyt.csv'}, {'row': 1182, 'source': 'nyt.csv'}, {'row': 1686, 'source': 'nyt.csv'}, {'row': 2827, 'source': 'nyt.csv'}, {'row': 163, 'source': 'nyt.csv'}, {'row': 1000, 'source': 'nyt.csv'}, {'row': 1762, 'source': 'nyt.csv'}, {'row': 474, 'source': 'nyt.csv'}, {'row': 1831, 'source': 'nyt.csv'}, {'row': 1490, 'source': 'nyt.csv'}, {'row': 871, 'source': 'nyt.csv'}]
+    - earned run average (e.r.a.)
+
+
+
+## Limitations to RAG: Not all documents extracted may be relevant. Therefore, it may be more effective to create a vector store by Chunking, rather than embedding each individual document.
+
+Topic cluster 6: sports
+    - pedro martinez's pitching performance in the 1999 world series
+   Summary: I cannot answer this question. The provided text does not contain any information about Pedro Martinez's pitching performance in the 1999 World Series.
+
+
+
+
