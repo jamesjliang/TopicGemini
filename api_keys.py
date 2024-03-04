@@ -1,5 +1,5 @@
 '''
-Project Name: TopicGemi
+Project Name: TopicGemini
 
 Module Name: api_keys.py
 Author: James Liang
