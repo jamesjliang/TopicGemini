@@ -47,12 +47,17 @@ An implementation of Retrieval Augmented Generation (RAG) is provided if users a
 ![image](https://github.com/jamesliang728/TopicGemini/assets/161998923/9c83ad7c-8a5e-4b24-87e0-16a012f11733)
 
 In TopicGemini, a vector store is created by:
+
     1. Loading a Document object
+    
     2. Chunking the document (if: for_document = False)
+    
     3. Embedding via GoogleGenerativeAIEmbeddings, and using Chroma for VectorStore.
 
 When running RAG in TopicGemini, you are able to get:
+
     (1) The summary response to the prompt. 
+    
     (2) The news documents that were used to generate its response.
 
 ## Sample Results
