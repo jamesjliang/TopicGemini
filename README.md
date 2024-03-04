@@ -11,7 +11,7 @@ However, both these methods suffer from unsatisfactory topic granularity in the 
 and often, require a professional human curator to relabel the extracted 'topic' terms.
 
 With the introduction of Large Language Models such as GPT-4 or Gemini, which are capable of incorporating semantic understanding
-into natural language processing, TopicGemi explores the potential of how LLMs can be leveraged to 
+into natural language processing, TopicGemini explores the potential of how LLMs can be leveraged to 
 improve existing processes in Topic Modelling, making them more effective for topic extraction.
 
 ## Inputs and Outputs
